@@ -1,0 +1,46 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+#header {
+    width: 100%;
+    height: 4em;
+    padding-top: 1px;
+    background-color: #E8504F;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    margin-top: 1.4em;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nav_list {
+    list-style: none;
+    padding: 0;
+}
+
+#nav_list li {
+    float: left;
+    width: 10em;
+    font-size: 1em;
+    color: white;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#logo {
+    width: 2em;
+    margin: 1em;
+    float: left;
+}
