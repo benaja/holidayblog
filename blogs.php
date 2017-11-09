@@ -1,4 +1,5 @@
-<?php
+<div id="benutuer">
+    <?php
   // Alle Blogs bzw. Benutzernamen holen und falls Blog bereits ausgewählt, entsprechenden Namen markieren
   // Hier Code....
 
@@ -6,9 +7,26 @@
   // Hier Code....
 
   // Nachfolgend das Beispiel einer Ausgabe in HTML, dieser Teil muss mit einer Schlaufe über alle Blogs und der Ausgabe mit PHP ersetzt werden
+    $users = getUserNames();
+    foreach($users as $user){
+        //var_dump($user);
+        //echo "<br>";
+        echo "<div><a href='index.php?function=blogs&bid=" . $user['uid'] . "' title='Blog auswählen'><h4>" . $user['name'] . "</h4></a></div>";
+    }
 ?>
-	<div><a href='index.php?function=blogs&bid=4' title='Blog auswählen'><h4>Anna Abegglen</h4></a></div>
-	<div><a href='index.php?function=blogs&bid=2' title='Blog auswählen'><h4>Hans Hinterseer</h4></a></div>
-	<div><a href='index.php?function=blogs&bid=1' title='Blog auswählen'><h4>Marc Muster</h4></a></div>
-	<div><a href='index.php?function=blogs&bid=3' title='Blog auswählen'><h4>Sonja Sauser</h4></a></div>
-
+</div>
+<div id="blogs">
+    <?php
+        $blogs = getEntries($blogId);
+        //var_dump($blogs);
+        
+        foreach($blogs as $blog){
+            $order   = array("\r\n", "\n", "\r");
+            $replace = '<br />';
+            $content = str_replace($order, $replace, $blog['content']);
+            echo "<div class='blog'> 
+                    <h2>". $blog['title'] . "</h2>
+                    <p>" . $content . "</p>";
+        }
+    ?>
+</div>

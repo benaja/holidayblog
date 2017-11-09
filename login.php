@@ -12,16 +12,19 @@
   // Wenn Formular gesendet worden ist, die Login-Daten aber nicht korrekt sind:
   // Unten auf der Seite Anzeige der Fehlermeldung.
 ?>
-<form method="post" action="<?php echo $_SERVER['PHP_SELF']."?function=login"; ?>">
-  <label for="email">Benutzername</label>
-  <div>
-	<input type="email" id="email" name="email" placeholder="E-Mail" value="" />
-  </div>
-  <label for="passwort">Passwort</label>
-  <div>
-	<input type="password" id="passwort" name="passwort" placeholder="Passwort" value="" />
-  </div>
-  <div>
-	<button type="submit">senden</button>
-  </div>
-</form>
+    <div id="login">
+        <h2 id="login_titel">Login</h2>
+        <form id="loginform" method="post" action="<?php echo $_SERVER['PHP_SELF']." ?function=login "; ?>">
+            <label for="email">Benutzername</label>
+            <div class="login_div">
+                <input class="login_imput" type="email" id="email" name="email" placeholder="E-Mail" value="" />
+            </div>
+            <label for="passwort">Passwort</label>
+            <div class="login_div">
+                <input  class="login_imput" type="password" id="passwort" name="passwort" placeholder="Passwort" value="" />
+            </div>
+            <div>
+                <button id="login_button" type="submit">Login</button>
+            </div>
+        </form>
+    </div>

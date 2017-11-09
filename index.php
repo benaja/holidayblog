@@ -35,6 +35,7 @@
 -->
         <div id="header">
             <img src="images/icon.svg" id="logo">
+            <h2 id="holiday">HolidayBlog</h2>
             <div id="nav">
                 <ul id="nav_list">
                     <li><a href="<?php echo "index.php?function=login&bid=$blogId"?>">Login</a></li>
@@ -43,13 +44,13 @@
                 </ul>
             </div>
         </div>
-        <div class="container" style="margin-top:80px">
+        <div class="container">
             <?php
-    // Für jede Funktion, die mit ?function=xy in der URL übergeben wird, muss eine Datei (in diesem Fall xy.php) existieren.
-	// Diese Datei wird aufgerufen, um den Content der Seite aufzubereiten und anzuzeigen.
-	if (!file_exists("$function.php")) exit("Die Datei '$function.php' konnte nicht gefunden werden!");
-	require_once("$function.php");
-  ?>
+                // Für jede Funktion, die mit ?function=xy in der URL übergeben wird, muss eine Datei (in diesem Fall xy.php) existieren.
+                // Diese Datei wird aufgerufen, um den Content der Seite aufzubereiten und anzuzeigen.
+                if (!file_exists("$function.php")) exit("Die Datei '$function.php' konnte nicht gefunden werden!");
+                require_once("$function.php");
+            ?>
         </div>
     </body>
 
