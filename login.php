@@ -11,20 +11,40 @@
   // header('Location: index.php?function=entries_member');
   // Wenn Formular gesendet worden ist, die Login-Daten aber nicht korrekt sind:
   // Unten auf der Seite Anzeige der Fehlermeldung.
+
+
+    
+
 ?>
     <div id="login">
         <h2 id="login_titel">Login</h2>
-        <form id="loginform" method="post" action="<?php echo $_SERVER['PHP_SELF']." ?function=login "; ?>">
-            <label for="email">Benutzername</label>
-            <div class="login_div">
-                <input class="login_imput" type="email" id="email" name="email" placeholder="E-Mail" value="" />
-            </div>
-            <label for="passwort">Passwort</label>
-            <div class="login_div">
-                <input  class="login_imput" type="password" id="passwort" name="passwort" placeholder="Passwort" value="" />
-            </div>
-            <div>
-                <button id="login_button" type="submit">Login</button>
-            </div>
-        </form>
+        <?php
+            if(isset($_POST['email'])){
+                $userid = getUserIdFromDb($_POST['email'], $_POST['passwort']);
+                if($userid == 0){
+                    echo "<p id='login_falsch'>Login nicht korrekt!</p>";
+                }else{
+                    $_SESSION['userId']=$userid;
+                    header("Location: {$_SERVER['PHP_SELF']}?function=mein_blog");
+                }
+            }
+        ?>
+            <form id="loginform" method="post" action="<?php echo $_SERVER['PHP_SELF']."?function=login "; ?>">
+                <label for="email">Benutzername</label>
+                <div class="login_div">
+                    <input class="login_imput" type="email" id="email" name="email" placeholder="E-Mail" value="" />
+                </div>
+                <label for="passwort">Passwort</label>
+                <div class="login_div">
+                    <input class="login_imput" type="password" id="passwort" name="passwort" placeholder="Passwort" value="" />
+                </div>
+                <div>
+                    <button id="login_button" type="submit">Login</button>
+                </div>
+            </form>
+
     </div>
+
+    <a href="index.php?function=registrieren">
+        <button id="rigistrieren_button">Registrieren</button>
+    </a>

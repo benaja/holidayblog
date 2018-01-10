@@ -84,7 +84,7 @@ a {
     width: 24em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3em;
+    margin-top: 1em;
 }
 
 .login_imput {
@@ -122,13 +122,47 @@ a {
 }
 
 #benutuer {
-    width: 10em;
-    float: left;
+    width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 0.5em;
 }
 
 #blogs {
+    margin-left: 2em;
     width: 50em;
     float: left;
+}
+
+.autoren{
+    width: 90%;
+    height: 3em;
+    margin: 1em 5%;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
+    border-bottom-width: 1px;
+}
+
+
+.autoren:hover a h4{
+    color: #FF7057;
+    transition-duration: 0.3s;
+}
+
+.autoren:hover{
+    border-bottom-color: #FF7057;
+}
+
+#selected{
+    border-bottom-color: #FF7057;
+}
+
+#selected a h4{
+    color: #FF7057;
 }
 
 @media (max-width: 80em){
@@ -139,4 +173,311 @@ a {
     #blogs{
         width: 40em;
     }
+}
+#autoren {
+    text-align: center;
+}
+
+#blogs_ubersicht{
+    width: 20em;
+    float: left;
+}
+#autor_blogs {
+    text-align: center;
+}
+
+.blogs_beschreibung{
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+}
+
+.blogs_beschreibung h3{
+    margin: 0 0 0.5em 0;
+    width: 8em;
+    float: left;
+}
+
+.blogs_beschreibung h4{
+    margin: 0;
+    float: right;
+    font-size: 1em;
+}
+
+.blogs_beschreibung p{
+    clear: both;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+#ausgewaelter_blog{
+    border-color: #FF7057;
+}
+
+#login_falsch{
+    margin-top: 0;
+    text-align: center;
+    color: #FF7057;
+}
+
+#user{
+    width: 15em;
+    float: right;
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+#user_name{
+    color: white;
+    text-align: right;
+    margin-right: 4em;
+    margin-top: 0.8em;
+}
+
+#profile{
+    width: 3em;
+    float: right;
+}
+
+#welcome{
+    text-align: center;
+    margin-top: 0;
+}
+#beitraege {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.member_beitraege{
+    height: 8rem;
+    width: 20rem;
+    float: left;
+    padding-bottom: 0;
+    position: relative;
+    cursor: pointer;
+    margin: 1rem 2rem;
+}
+
+.member_beitraege p{
+    margin-top: 2rem;
+    clear: none;
+    overflow: hidden;
+    height: 5rem;
+}
+
+.text_hider{
+    width: 90%;
+    height: 1em;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+}
+
+.edit_delete{
+    float: right;
+    width: 24rem;
+    height: 5rem;
+}
+
+.swal2-popup .swal2-styled:focus{
+    box-shadow: none !important;
+}
+.button {
+    float: left;
+    padding-top: 1px;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+    background-color: #E8504F;
+    margin: 1rem 1rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #c44544;
+}
+
+.buttons_text {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0.7rem;
+}
+
+#blog_header{
+    width: 20rem;
+    float: left;
+}
+
+#blog_content{
+    clear: both;
+}
+
+input, textarea{
+    display: block;
+    font-size: 1.3rem;
+    border-radius: 0.3rem;
+    border-width: 1px;
+    border-color: #E8504F;
+    border-style: solid;
+}
+
+#edit {
+    width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit_input{
+    max-width: 58rem;
+    min-width: 58rem;
+    width: 58rem;
+    padding: 1rem;
+}
+
+textarea{
+    min-height: 20rem;
+    height: 30rem;
+    max-height: 60rem;
+    margin-bottom: 2rem;
+}
+.edit_titel {
+    font-size: 1.2rem;
+    margin: 2rem 0 0 0;
+    color: gray;
+    font-weight: normal;
+}
+
+button {
+    border-style: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.edit_buttons {
+    width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#neuer_blog {
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+#kommentar {
+    width: 38rem;
+    height: 25px;
+    min-height: 1rem;
+    padding: 1rem;
+    border-radius: 0;
+    border-style: none;
+    background-color: #d4d4d4;
+}
+
+#kommentare {
+    margin-top: 4rem;
+    margin-bottom: 2rem;    
+}
+
+#senden {
+    float: right;
+    width: 8rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+#senden_text{
+    margin-top: 0.9rem;
+}
+
+.kommentar_name{
+    float: left;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.kommentar_time{
+    float: right;
+    margin-top: 0;
+}
+
+.kommentar_text{
+    clear: both;
+    margin-bottom: 0.5rem;
+}
+
+.kommentar{
+    width: 38rem;
+    background-color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.kommentar_content{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+}
+
+
+.default_button{
+    background-color: #E8504F;
+    cursor: pointer;
+}
+
+.default_button:hover{
+    background-color: #c44544;
+}
+
+.kommentar_edit{
+    width: 8rem;
+    height: 3rem;
+    padding-top: 1px;
+    margin: 1rem auto 0 auto;
+}
+
+.kommentar_edit_text{
+    color: white;
+    text-align: center;
+    margin-top: 0.8rem;
+}
+#rigistrieren_button {
+    width: 24em;
+    height: 2.5em;
+    font-size: 1em;
+    background-color: #E8504F;
+    border-radius: 0.4em;
+    border-style: none;
+    color: white;
+    margin-bottom: 4em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+    display: block;
+}
+
+#go_to_login_button{
+    width: 24rem;
+    height: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+}
+#erfolgreich_registriert{
+    color: #00cc00;
+}
+
+#login p{
+    text-align: center;
 }

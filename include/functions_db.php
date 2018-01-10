@@ -94,7 +94,7 @@
    ************************************************************************************************/
   function getEntry($eid) {
 	$db = getValue('cfg_db');
-	$result = $db->query("SELECT eid, datetime, title, content, picture1, picture2, picture3 FROM entry WHERE eid=$eid");
+	$result = $db->query("SELECT eid, uid, datetime, title, content, picture1, picture2, picture3 FROM entry WHERE eid=$eid");
 	if ($entry = $result->fetchArray()) {
 	  return $entry;
 	} else return "";
