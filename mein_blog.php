@@ -94,7 +94,7 @@
                     $replace = '<br />';
                     $content = str_replace($order, $replace, $kommentar['content']);
                     //$date = date("Y-m-d H:i:s", $blog['datetime']);
-                    $date = date("d.m.Y / H:i", $blog['datetime']);
+                    $date = date("d.m.Y / H:i", $kommentar['datetime']);
 
                     echo "<div class='kommentar'>
                             <div class='kommentar_content'>

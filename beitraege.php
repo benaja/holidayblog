@@ -18,7 +18,6 @@
     </h1>
     <div id="blogs_ubersicht">
         <?php
-            
             foreach($blogs as $blog){
                 $order   = array("\r\n", "\n", "\r");
                 $replace = '<br />';
@@ -53,7 +52,7 @@
         //$blogs = getEntries($blogId);
         //var_dump($blogs);
             $uid = 0;
-            $blog = getEntry($eid);         
+            $blog = getEntry($eid);  
                 $uid = $blog['uid'];
                 $order   = array("\r\n", "\n", "\r");
                 $replace = '<br />';
@@ -85,7 +84,7 @@
                     $replace = '<br />';
                     $content = str_replace($order, $replace, $kommentar['content']);
                     //$date = date("Y-m-d H:i:s", $blog['datetime']);
-                    $date = date("d.m.Y / H:i", $blog['datetime']);
+                    $date = date("d.m.Y / H:i", $kommentar['datetime']);
                     
                     echo "<div class='kommentar'>
                             <div class='kommentar_content'>
